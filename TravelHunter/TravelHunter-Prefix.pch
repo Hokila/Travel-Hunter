@@ -1,0 +1,30 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "MBProgressHUD.h"
+    #import "SVHTTPClient.h"
+    #import "UIImageView+ImageCache.h"
+#endif
+
+#define kUserName @"gethwhnabsg4h4qh"
+#define kUserUUID @"g3y4hrebhryhsn"
+#define kIconImage @"sgetghrhrhrnbae"
+
+#define TTbasePath  @"http://yahoo-hackday.herokuapp.com"
+
+#define ShowAlert(msg) { UIAlertView *av = [[UIAlertView alloc] initWithTitle:nil message:msg delegate:nil cancelButtonTitle:NSLocalizedString(@"確定",nil) otherButtonTitles:nil];[av show]; }
+#define ShowAlertWithTitle(title,msg) { UIAlertView *av = [[UIAlertView alloc] initWithTitle:title message:msg delegate:nil cancelButtonTitle:NSLocalizedString(@"確定",nil) otherButtonTitles:nil];[av show]; }
+#define ShowMyAlert(msg,btnCancelTitle,btnOKTitle) { UIAlertView *av = [[UIAlertView alloc] initWithTitle:nil message:msg delegate:self cancelButtonTitle:btnCancelTitle otherButtonTitles:btnOKTitle, nil];[av show]; }
+#define ShowMyAlertWithTag(title,msg,tag,btnCancelTitle,btnOKTitle) { UIAlertView *av = [[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:btnCancelTitle otherButtonTitles:btnOKTitle, nil]; [av setTag:tag]; [av show]; }
