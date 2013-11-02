@@ -27,12 +27,18 @@
 @property (weak, nonatomic) IBOutlet UIView *quView;
 @property (weak, nonatomic) IBOutlet UIView *heroView;
 @property (weak, nonatomic) IBOutlet UIView *choiceView;
+@property (weak, nonatomic) IBOutlet UIView *winloseView;
 
 //各View上的細項
 //血條系列
 @property (weak, nonatomic) IBOutlet BloodView *bossBlood;
 @property (weak, nonatomic) IBOutlet BloodView *heroBlood;
 @property (weak, nonatomic) IBOutlet BloodView *timeCounter;
+
+//win lose 系列
+@property (weak, nonatomic) IBOutlet UIImageView *statusImg1;
+@property (weak, nonatomic) IBOutlet UIImageView *statusImg2;
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 
 //倒數計時
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;

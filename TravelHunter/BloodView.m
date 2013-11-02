@@ -67,12 +67,8 @@ const float totalTime = 10;
         return;
     }
     
-    [self initCountdownTimer];
-}
-
--(void)initCountdownTimer{
     leftTime = totalTime;
-    totalWidth = leftWidth = self.frame.size.width;
+    totalWidth = leftWidth = [self superview].frame.size.width;
     
     [countdownTimer invalidate];
     
@@ -83,6 +79,7 @@ const float totalTime = 10;
                                                      repeats:YES];
     leftTime = 10;
 }
+
 -(void)countDown{
     leftTime = leftTime -0.1;
     
@@ -121,7 +118,6 @@ const float totalTime = 10;
             [self.delegate performSelector:@selector(devilWin) withObject:nil];
         }
     }
-    
     //更新血條
     [self updateWidth:[self bloodToWidth:leftBlood]];
 }

@@ -295,7 +295,7 @@
                             </imageView>
                             <view contentMode="scaleToFill" id="A1T-cU-f46">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tDh-bD-3lh">
                                         <rect key="frame" x="82" y="7" width="156" height="36"/>
@@ -343,8 +343,29 @@
                             </view>
                             <view contentMode="scaleToFill" id="bzu-v2-xcV" userLabel="PK View">
                                 <rect key="frame" x="0.0" y="45" width="320" height="390"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
                                 <subviews>
+                                    <view contentMode="scaleToFill" id="jeK-Wn-2M2" userLabel="winloseView">
+                                        <rect key="frame" x="0.0" y="72" width="320" height="248"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="jNL-eq-2sB">
+                                                <rect key="frame" x="0.0" y="40" width="160" height="160"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="yIE-ct-QKs">
+                                                <rect key="frame" x="172" y="65" width="140" height="75"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BVe-JH-h9B">
+                                                <rect key="frame" x="172" y="148" width="141" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
                                     <view contentMode="scaleToFill" id="PgT-Bk-hNy" userLabel="bossView">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
@@ -485,13 +506,17 @@
                         <outlet property="pkView" destination="bzu-v2-xcV" id="nal-Yd-xCX"/>
                         <outlet property="quTextField" destination="szB-Np-I2l" id="OfT-rO-1BQ"/>
                         <outlet property="quView" destination="sbA-Ez-5eU" id="rPF-Zd-9X3"/>
+                        <outlet property="statusImg1" destination="jNL-eq-2sB" id="2oS-E7-dVe"/>
+                        <outlet property="statusImg2" destination="yIE-ct-QKs" id="8wn-Yt-iFC"/>
+                        <outlet property="statusLabel" destination="BVe-JH-h9B" id="20H-LA-v0n"/>
                         <outlet property="timeCounter" destination="RPe-WD-bvA" id="p7n-6l-W0T"/>
                         <outlet property="totalLabel" destination="oIb-ve-VJ7" id="nne-FV-5ml"/>
+                        <outlet property="winloseView" destination="jeK-Wn-2M2" id="NdU-mz-VhF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T0j-sr-Kx6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1759" y="517"/>
+            <point key="canvasLocation" x="1653" y="519"/>
         </scene>
         <!--ObserveVC-->
         <scene sceneID="blE-uP-fiP">

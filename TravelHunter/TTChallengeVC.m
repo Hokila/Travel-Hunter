@@ -23,6 +23,8 @@ typedef NS_ENUM(int, QuestionType) {
     
     NSTimer *totalTimer;   //總共的時間
     CGFloat totalTime;
+    
+    BOOL isGameEnd;
 }
 @end
 
@@ -109,6 +111,7 @@ typedef NS_ENUM(int, QuestionType) {
     [currentAnswerArr enumerateObjectsUsingBlock:^(NSString* answer, NSUInteger idx, BOOL *stop) {
         UIButton* btn = choiceList[idx];
         [btn setTitle:answer forState:UIControlStateNormal];
+        [btn setBackgroundImage:[UIImage imageNamed:@"fight_choose_btn"] forState:UIControlStateNormal];
     }];
 }
 
@@ -137,13 +140,28 @@ typedef NS_ENUM(int, QuestionType) {
 
 -(void)gotoNextQuestion{
     //不考慮題目完了王還沒死的情形
+    if (isGameEnd) {
+        return;
+    }
+    
     currentQuestion ++;
-    [self loadQuestion:currentQuestion];
+    if (currentQuestion >= [_qaArr count]) {
+        ShowAlert(@"沒題目了啦")
+    }
+    else{
+        [self loadQuestion:currentQuestion];
+    }
 }
 
 -(void)setupView{
     //setup View
-    _quView.center = _pkView.center;
+    [_iconImage loadImageWithURL:[NSURL URLWithString:[[NSUserDefaults standardUserDefaults]valueForKey:kIconImage ]]];
+    
+    _quView.hidden = NO;
+    _winloseView.hidden = YES;
+    
+//    _quView.center =  _pkView.center;
+//    _winloseView.center = self.view.center;
     
     self.heroBlood.bloodtype = BTPlayer;
     self.bossBlood.bloodtype = BTDevil;
@@ -166,7 +184,7 @@ typedef NS_ENUM(int, QuestionType) {
     
     currentAnswerArr = [[NSMutableArray alloc]init];
     
-    
+    isGameEnd = NO;
 }
 
 -(void)clickBack:(id)sender{
@@ -176,14 +194,41 @@ typedef NS_ENUM(int, QuestionType) {
 #pragma -mark Blood CallBack
 -(void)devilWin{
     NSLog(@"你輸了");
+    [self stopEverything];
+    
+    _quView.hidden = YES;
+    _winloseView.hidden = NO;
+    
+    _statusImg1.image = [UIImage imageNamed:@"fight_lose_icon"];
+    _statusImg2.image = [UIImage imageNamed:@"fight_lose_text"];
+    _statusLabel.text = _totalLabel.text;
+    _statusLabel.textColor = [UIColor redColor];
+    
 }
 
 -(void)humanWin{
     NSLog(@"你贏了");
+    [self stopEverything];
+    
+    _quView.hidden = YES;
+    _winloseView.hidden = NO;
+    
+    _statusImg1.image = [UIImage imageNamed:@"fight_win_icon"];
+    _statusImg2.image = [UIImage imageNamed:@"fight_win_text"];
+    _statusLabel.text = _totalLabel.text;
+    _statusLabel.textColor = [UIColor blueColor];
+}
+
+
+-(void)stopEverything{
+    [_timeCounter stop];
+    [totalTimer invalidate];
+    isGameEnd = YES;
 }
 
 -(void)timeisEnd{
     [_heroBlood getAttack];
+    [self gotoNextQuestion];
 }
 
 - (IBAction)clickAnswer:(UIButton*)btn {
@@ -193,18 +238,38 @@ typedef NS_ENUM(int, QuestionType) {
         [self AnswerCorrect];
     }
     else{
-        [self AnswerWrong];
-        
+        [self AnswerWrong:btn.tag];
     }
 }
 
 -(void)AnswerCorrect{
     //答對了
     [_bossBlood getAttack];
+    [_timeCounter stop];
+    
+    [self showRightAnswer];
+    
+    [self performSelector:@selector(gotoNextQuestion) withObject:nil afterDelay:2.0f];
 }
 
--(void)AnswerWrong{
+-(void)AnswerWrong:(NSInteger)tag{
     //答錯了
     [_heroBlood getAttack];
+    [_timeCounter stop];
+    
+    [self showRightAnswer];
+    [self showWrongAnswer:tag];
+    
+    [self performSelector:@selector(gotoNextQuestion) withObject:nil afterDelay:2.0f];
+}
+
+-(void)showRightAnswer{
+    UIButton *correctBtn = (UIButton*)[_choiceView viewWithTag:correctAnswerIndex];
+    [correctBtn setBackgroundImage:[UIImage imageNamed:@"fight_correct_btn"] forState:UIControlStateNormal];
+}
+
+-(void)showWrongAnswer:(NSInteger)tag{
+    UIButton *correctBtn = (UIButton*)[_choiceView viewWithTag:tag];
+    [correctBtn setBackgroundImage:[UIImage imageNamed:@"fight_wrong_btn"] forState:UIControlStateNormal];
 }
 @end
