@@ -286,7 +286,7 @@
             <objects>
                 <viewController storyboardIdentifier="TTChallenge" id="Pqt-5L-8Rb" customClass="TTChallengeVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w2H-Lg-c3d">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="xXD-SU-cfR">
@@ -327,7 +327,7 @@
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" id="74s-2g-3DK">
-                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fight_icon" id="0uL-Oz-pd4">
@@ -341,19 +341,152 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" id="bzu-v2-xcV">
-                                <rect key="frame" x="0.0" y="45" width="320" height="478"/>
+                            <view contentMode="scaleToFill" id="bzu-v2-xcV" userLabel="PK View">
+                                <rect key="frame" x="0.0" y="45" width="320" height="390"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="PgT-Bk-hNy" userLabel="bossView">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fight_boss_icon" id="xCZ-yA-N7z">
+                                                <rect key="frame" x="278" y="7" width="30" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03:12:0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oIb-ve-VJ7">
+                                                <rect key="frame" x="110" y="26" width="165" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="28"/>
+                                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="g5d-lC-W8d">
+                                                <rect key="frame" x="15" y="17" width="260" height="10"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" id="sVY-qk-tWI" customClass="BloodView">
+                                                        <rect key="frame" x="0.0" y="0.0" width="260" height="10"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="sbA-Ez-5eU" userLabel="questionView">
+                                        <rect key="frame" x="0.0" y="80" width="320" height="240"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" id="D2X-QT-wbk">
+                                                <rect key="frame" x="30" y="13" width="260" height="10"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" id="RPe-WD-bvA" customClass="BloodView">
+                                                        <rect key="frame" x="5" y="0.0" width="260" height="10"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            </view>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fight_timer" id="GBR-su-Qy5">
+                                                <rect key="frame" x="6" y="5" width="25" height="25"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" id="szB-Np-I2l">
+                                                <rect key="frame" x="9" y="38" width="303" height="56"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <view contentMode="scaleToFill" id="ueF-eS-HiW" userLabel="ChoiceView">
+                                                <rect key="frame" x="0.0" y="102" width="320" height="138"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="j7n-6o-WyI">
+                                                        <rect key="frame" x="20" y="20" width="280" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" backgroundImage="fight_choose_btn">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="clickAnswer:" destination="Pqt-5L-8Rb" eventType="touchUpInside" id="2kR-iV-eNy"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="R7U-vM-qCe">
+                                                        <rect key="frame" x="20" y="58" width="280" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" backgroundImage="fight_choose_btn">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="clickAnswer:" destination="Pqt-5L-8Rb" eventType="touchUpInside" id="4KR-Er-ouT"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="8BO-VF-PyH">
+                                                        <rect key="frame" x="20" y="96" width="280" height="30"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" backgroundImage="fight_choose_btn">
+                                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="clickAnswer:" destination="Pqt-5L-8Rb" eventType="touchUpInside" id="OGX-vT-1CS"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.65000000000000002" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="Y3M-EP-OKg" userLabel="heroView">
+                                        <rect key="frame" x="0.0" y="340" width="320" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fight_hero_icon" id="Ve8-VH-nCD">
+                                                <rect key="frame" x="13" y="9" width="30" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" id="lfh-Ch-YhA">
+                                                <rect key="frame" x="51" y="19" width="260" height="10"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" id="Omj-WX-Uvr" customClass="BloodView">
+                                                        <rect key="frame" x="0.0" y="0.0" width="260" height="10"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="TKW-UL-OyX"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="bgImage" destination="xXD-SU-cfR" id="LZB-38-uZ3"/>
+                        <outlet property="bossBlood" destination="sVY-qk-tWI" id="c3f-Tx-UOM"/>
+                        <outlet property="bossView" destination="PgT-Bk-hNy" id="du8-mG-e4C"/>
+                        <outlet property="choiceView" destination="ueF-eS-HiW" id="zMQ-Wd-0jF"/>
                         <outlet property="develLabel" destination="tDh-bD-3lh" id="IJd-zO-TUa"/>
+                        <outlet property="heroBlood" destination="Omj-WX-Uvr" id="lGu-6k-v1r"/>
+                        <outlet property="heroView" destination="Y3M-EP-OKg" id="8my-F9-PY7"/>
                         <outlet property="iconImage" destination="C72-U9-NPj" id="NRa-gU-OWj"/>
+                        <outlet property="pkView" destination="bzu-v2-xcV" id="nal-Yd-xCX"/>
+                        <outlet property="quTextField" destination="szB-Np-I2l" id="OfT-rO-1BQ"/>
+                        <outlet property="quView" destination="sbA-Ez-5eU" id="rPF-Zd-9X3"/>
+                        <outlet property="timeCounter" destination="RPe-WD-bvA" id="p7n-6l-W0T"/>
+                        <outlet property="totalLabel" destination="oIb-ve-VJ7" id="nne-FV-5ml"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T0j-sr-Kx6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -441,11 +574,21 @@
     </scenes>
     <resources>
         <image name="back_arrow" width="72" height="72"/>
+        <image name="back_arrow" width="72" height="72"/>
+        <image name="back_arrow" width="72" height="72"/>
+        <image name="fight_boss_icon" width="60" height="60"/>
+        <image name="fight_choose_btn" width="560" height="74"/>
+        <image name="fight_choose_btn" width="560" height="74"/>
+        <image name="fight_choose_btn" width="560" height="74"/>
+        <image name="fight_hero_icon" width="60" height="60"/>
         <image name="fight_icon" width="72" height="72"/>
         <image name="fight_text" width="107" height="51"/>
+        <image name="fight_timer" width="50" height="50"/>
         <image name="observe_icon" width="72" height="72"/>
         <image name="observe_text" width="108" height="51"/>
         <image name="powered_by_flickr_icon" width="261" height="34"/>
+        <image name="under_bar_btn" width="180" height="74"/>
+        <image name="under_bar_btn" width="180" height="74"/>
         <image name="under_bar_btn" width="180" height="74"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

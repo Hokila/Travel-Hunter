@@ -105,8 +105,8 @@
     }
     
     [_annotationList enumerateObjectsUsingBlock:^(NSDictionary *dic, NSUInteger idx, BOOL *stop) {
-        NSString* icon = [dic valueForKey:@"icon"];
-        NSString* pinStr = [dic valueForKey:@"pin"];
+//        NSString* icon = [dic valueForKey:@"icon"];
+//        NSString* pinStr = [dic valueForKey:@"pin"];
         NSString* name = [dic valueForKey:@"name"];
         
         CLLocation *location = [self getPosition:[dic valueForKey:@"position"]];
