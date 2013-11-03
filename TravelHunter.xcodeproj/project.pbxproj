@@ -408,9 +408,6 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = Splashtop;
 				TargetAttributes = {
-					5AD6636C181CE4C200069150 = {
-						DevelopmentTeam = CJ9ARSV7HF;
-					};
 					5AD6638D181CE4C200069150 = {
 						TestTargetID = 5AD6636C181CE4C200069150;
 					};
@@ -627,7 +624,8 @@
 				INFOPLIST_FILE = "TravelHunter/TravelHunter-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0876739B-2578-426A-B6E8-EEA243534E39";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -644,8 +642,8 @@
 				INFOPLIST_FILE = "TravelHunter/TravelHunter-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0876739B-2578-426A-B6E8-EEA243534E39";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "0876739B-2578-426A-B6E8-EEA243534E39";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
