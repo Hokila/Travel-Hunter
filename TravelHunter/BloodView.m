@@ -111,6 +111,8 @@ const float totalTime = 10;
     
     
     if (leftBlood <0) {
+        [self updateWidth:0];
+        
         if (self.bloodtype == BTDevil) {
             [self.delegate performSelector:@selector(humanWin) withObject:nil];
         }

@@ -204,6 +204,12 @@ typedef NS_ENUM(int, QuestionType) {
     _statusLabel.text = _totalLabel.text;
     _statusLabel.textColor = [UIColor redColor];
     
+    NSInteger vs_status = [[[NSUserDefaults standardUserDefaults]valueForKey:kUserVS]integerValue];
+    
+    if (vs_status == 0) {
+        [self updateStatus:1];
+    }
+    
 }
 
 -(void)humanWin{
@@ -217,8 +223,38 @@ typedef NS_ENUM(int, QuestionType) {
     _statusImg2.image = [UIImage imageNamed:@"fight_win_text"];
     _statusLabel.text = _totalLabel.text;
     _statusLabel.textColor = [UIColor blueColor];
+    
+    NSInteger vs_status = [[[NSUserDefaults standardUserDefaults]valueForKey:kUserVS]integerValue];
+    
+    NSInteger newStatus = (int)totalTime;
+    
+    if (newStatus >1 && newStatus<vs_status) {
+        [self updateStatus:(int)totalTime];
+    }
 }
 
+-(void)updateStatus:(NSInteger)status{
+//    {"uuid":"JC8wF6BjNmcG75aeuxXYo0xFHKZjcUXM","upid":"0zV1US4q5AW1AwNg0LiLV5wL2g8oleLV","vs_status":350}
+    NSUserDefaults* userDefault = [NSUserDefaults standardUserDefaults];
+    NSString* uuid = [userDefault valueForKey:kUserUUID];
+    NSString* upid = [userDefault valueForKey:kUserUpID];
+    
+    NSDictionary*param = @{@"uuid":uuid,
+                           @"upid":upid,
+                           @"vs_status":[NSString stringWithFormat:@"%d",status]};
+    
+    [[SVHTTPClient sharedClient] PUT:@"/place" parameters:param completion:^(id response, NSHTTPURLResponse *urlResponse, NSError *error) {
+        
+        //結束loading
+        if (error) {
+            NSLog(@"%@",error);
+            ShowAlert(@"updateStatus fail");
+        }
+        else{
+            NSLog(@"%@",response);
+        }
+    }];
+}
 
 -(void)stopEverything{
     [_timeCounter stop];
@@ -249,7 +285,7 @@ typedef NS_ENUM(int, QuestionType) {
     
     [self showRightAnswer];
     
-    [self performSelector:@selector(gotoNextQuestion) withObject:nil afterDelay:2.0f];
+    [self performSelector:@selector(gotoNextQuestion) withObject:nil afterDelay:0.5f];
 }
 
 -(void)AnswerWrong:(NSInteger)tag{
@@ -260,7 +296,7 @@ typedef NS_ENUM(int, QuestionType) {
     [self showRightAnswer];
     [self showWrongAnswer:tag];
     
-    [self performSelector:@selector(gotoNextQuestion) withObject:nil afterDelay:2.0f];
+    [self performSelector:@selector(gotoNextQuestion) withObject:nil afterDelay:0.5f];
 }
 
 -(void)showRightAnswer{

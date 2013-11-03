@@ -20,6 +20,8 @@
 
 #define kUserName @"gethwhnabsg4h4qh"
 #define kUserUUID @"g3y4hrebhryhsn"
+#define kUserUpID @"tq35hnrh5j5hagaeheq"
+#define kUserVS   @"vegsrrh4yhy4jjajaeh"
 #define kIconImage @"sgetghrhrhrnbae"
 
 #define TTbasePath  @"http://yahoo-hackday.herokuapp.com"
@@ -28,3 +30,5 @@
 #define ShowAlertWithTitle(title,msg) { UIAlertView *av = [[UIAlertView alloc] initWithTitle:title message:msg delegate:nil cancelButtonTitle:NSLocalizedString(@"確定",nil) otherButtonTitles:nil];[av show]; }
 #define ShowMyAlert(msg,btnCancelTitle,btnOKTitle) { UIAlertView *av = [[UIAlertView alloc] initWithTitle:nil message:msg delegate:self cancelButtonTitle:btnCancelTitle otherButtonTitles:btnOKTitle, nil];[av show]; }
 #define ShowMyAlertWithTag(title,msg,tag,btnCancelTitle,btnOKTitle) { UIAlertView *av = [[UIAlertView alloc] initWithTitle:title message:msg delegate:self cancelButtonTitle:btnCancelTitle otherButtonTitles:btnOKTitle, nil]; [av setTag:tag]; [av show]; }
+
+#define SUPPORT_iOS7 (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"7.0"))

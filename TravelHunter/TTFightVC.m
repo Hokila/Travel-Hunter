@@ -45,6 +45,10 @@
     //change
     CGFloat sourceViewHeight = CGRectGetHeight(_infoTextField.frame) + _infoTextField.frame.origin.y;
     _infoSourceView.frame = CGRectMake(10, sourceViewHeight, 300, 25);
+    
+    [[NSUserDefaults standardUserDefaults]setValue:_vs_status forKey:kUserVS];
+    
+    
 }
 
 -(void)loadvs_Status{
@@ -118,6 +122,7 @@
     vc.devilName = _devilName;
     vc.qaArr = _qaArr;
     vc.bgURL = _bgURL;
+    vc.vs_status = [_vs_status integerValue];
     
     [self.navigationController pushViewController:vc animated:YES];
 }

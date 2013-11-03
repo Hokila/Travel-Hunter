@@ -11,6 +11,7 @@
 
 @interface TTChallengeVC : UIViewController <BloodViewDelegate>
 //var used for init
+@property (nonatomic) NSInteger vs_status;
 @property (nonatomic,strong) NSString* devilName;
 @property (nonatomic,strong) NSMutableArray* qaArr;
 @property (nonatomic,strong) NSString* bgURL;

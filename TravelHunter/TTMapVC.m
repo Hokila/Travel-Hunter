@@ -88,7 +88,7 @@
             ShowAlert(@"get place fail");
         }
         else{
-            [_annotationList removeAllObjects];
+//            [_annotationList removeAllObjects];
             
             NSLog(@"%@",response);
             
@@ -187,8 +187,9 @@
                 NSData* data = [[NSData alloc] initWithContentsOfURL:aURL];
                 _devilIcon.image = [UIImage imageWithData:data];
                 
-                //store iconURL
+                //store iconURL &UPID
                 [[NSUserDefaults standardUserDefaults]setValue:iconURL forKey:kIconImage];
+                [[NSUserDefaults standardUserDefaults]setValue:selectedupid forKey:kUserUpID];
                 [[NSUserDefaults standardUserDefaults]synchronize];
                 
                 *stop = YES;

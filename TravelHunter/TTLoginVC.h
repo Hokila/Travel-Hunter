@@ -12,6 +12,12 @@
 
 @interface TTLoginVC : UIViewController<UITextFieldDelegate>{
 }
-@property (unsafe_unretained, nonatomic) IBOutlet UITextField *nameText;
+@property (weak, nonatomic) IBOutlet UIScrollView *scroller;
+@property (weak, nonatomic) IBOutlet UITextField *nameText;
+
+@property (nonatomic, assign) CGRect keyboardFrame;
+@property (nonatomic, assign) CGRect inputArea;
+
+- (IBAction)touchLogin:(id)sender;
 
 @end

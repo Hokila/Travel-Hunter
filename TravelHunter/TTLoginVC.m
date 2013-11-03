@@ -48,6 +48,8 @@
         
         _nameText.text = @"";
     }
+    
+    [self initKeyboard];
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,7 +58,32 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma -mark keyboard
+- (void)initKeyboard
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+}
+
+- (void)keyboardWillShow:(NSNotification *)notification
+{
+    [_scroller setContentOffset:CGPointMake(0, 150) animated:YES];
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification
+{
+    [_scroller setContentOffset:CGPointMake(0, 0) animated:YES];
+}
+
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [_nameText resignFirstResponder];
+    [self touchLogin:nil];
     
     return YES;
 }
