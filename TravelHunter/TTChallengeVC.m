@@ -7,6 +7,7 @@
 //
 
 #import "TTChallengeVC.h"
+#import "UIView+shake.h"
 
 typedef NS_ENUM(int, QuestionType) {
 	Q_TF,
@@ -56,6 +57,9 @@ typedef NS_ENUM(int, QuestionType) {
 -(void)startFight{
     [self loadQuestion:currentQuestion];
     [self initTimer];
+    
+    [[SimpleAudioEngine sharedEngine]playBackgroundMusic:@"bgMusic.wav" loop:YES];
+    [SimpleAudioEngine sharedEngine].backgroundMusicVolume = 0.3f;
 }
 
 -(void)initTimer{
@@ -194,6 +198,9 @@ typedef NS_ENUM(int, QuestionType) {
 #pragma -mark Blood CallBack
 -(void)devilWin{
     NSLog(@"你輸了");
+    
+    [[SimpleAudioEngine sharedEngine]performSelector:@selector(playEffect:) withObject:@"dead-mario.mp3" afterDelay:1.0f];
+    
     [self stopEverything];
     
     _quView.hidden = YES;
@@ -215,6 +222,8 @@ typedef NS_ENUM(int, QuestionType) {
 -(void)humanWin{
     NSLog(@"你贏了");
     [self stopEverything];
+    
+    [[SimpleAudioEngine sharedEngine]performSelector:@selector(playEffect:) withObject:@"win.mp3" afterDelay:1.0f];
     
     _quView.hidden = YES;
     _winloseView.hidden = NO;
@@ -260,6 +269,7 @@ typedef NS_ENUM(int, QuestionType) {
     [_timeCounter stop];
     [totalTimer invalidate];
     isGameEnd = YES;
+    [[SimpleAudioEngine sharedEngine]stopBackgroundMusic];
 }
 
 -(void)timeisEnd{
@@ -281,22 +291,27 @@ typedef NS_ENUM(int, QuestionType) {
 -(void)AnswerCorrect{
     //答對了
     [_bossBlood getAttack];
+    [_bossView shake];
     [_timeCounter stop];
     
     [self showRightAnswer];
     
     [self performSelector:@selector(gotoNextQuestion) withObject:nil afterDelay:0.5f];
+    [[SimpleAudioEngine sharedEngine]playEffect:@"刀劍敲擊.mp3"];
 }
 
 -(void)AnswerWrong:(NSInteger)tag{
     //答錯了
     [_heroBlood getAttack];
+    [_heroView shake];
+    
     [_timeCounter stop];
     
     [self showRightAnswer];
     [self showWrongAnswer:tag];
     
     [self performSelector:@selector(gotoNextQuestion) withObject:nil afterDelay:0.5f];
+    [[SimpleAudioEngine sharedEngine]playEffect:@"毒打.mp3"];
 }
 
 -(void)showRightAnswer{
@@ -308,4 +323,7 @@ typedef NS_ENUM(int, QuestionType) {
     UIButton *correctBtn = (UIButton*)[_choiceView viewWithTag:tag];
     [correctBtn setBackgroundImage:[UIImage imageNamed:@"fight_wrong_btn"] forState:UIControlStateNormal];
 }
+
+
+
 @end

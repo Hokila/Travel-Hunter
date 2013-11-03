@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A2EC2531825ED6800F0B785 /* dead-ladder.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A2EC24C1825ED6800F0B785 /* dead-ladder.mp3 */; };
+		5A2EC2541825ED6800F0B785 /* dead-mario.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A2EC24D1825ED6800F0B785 /* dead-mario.mp3 */; };
+		5A2EC2551825ED6800F0B785 /* dead-rockman.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A2EC24E1825ED6800F0B785 /* dead-rockman.mp3 */; };
+		5A2EC2641825ED9700F0B785 /* CDAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2EC25C1825ED9700F0B785 /* CDAudioManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5A2EC2651825ED9700F0B785 /* CDOpenALSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2EC25F1825ED9700F0B785 /* CDOpenALSupport.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5A2EC2661825ED9700F0B785 /* CocosDenshion.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2EC2611825ED9700F0B785 /* CocosDenshion.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5A2EC2671825ED9700F0B785 /* SimpleAudioEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2EC2631825ED9700F0B785 /* SimpleAudioEngine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5A2EC2691825EDC700F0B785 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2EC2681825EDC700F0B785 /* AVFoundation.framework */; };
+		5A2EC26B1825EDCC00F0B785 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2EC26A1825EDCC00F0B785 /* OpenAL.framework */; };
+		5A2EC26D1825EDD100F0B785 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A2EC26C1825EDD100F0B785 /* AudioToolbox.framework */; };
+		5A2EC2731825F50F00F0B785 /* win.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A2EC2721825F50F00F0B785 /* win.mp3 */; };
+		5A2EC2761825F91B00F0B785 /* 刀劍敲擊.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A2EC2741825F91B00F0B785 /* 刀劍敲擊.mp3 */; };
+		5A2EC2771825F91B00F0B785 /* 毒打.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5A2EC2751825F91B00F0B785 /* 毒打.mp3 */; };
+		5A2EC27C1825FB6500F0B785 /* UIView+shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A2EC27B1825FB6500F0B785 /* UIView+shake.m */; };
+		5A2EC27E1825FC7D00F0B785 /* bgMusic.wav in Resources */ = {isa = PBXBuildFile; fileRef = 5A2EC27D1825FC7D00F0B785 /* bgMusic.wav */; };
 		5A453B96181FD96000DC7578 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A453B95181FD96000DC7578 /* MapKit.framework */; };
 		5A453B98181FD96900DC7578 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A453B97181FD96900DC7578 /* CoreLocation.framework */; };
 		5A453B9A181FD96F00DC7578 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A453B99181FD96F00DC7578 /* QuartzCore.framework */; };
@@ -57,6 +72,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A2EC24C1825ED6800F0B785 /* dead-ladder.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "dead-ladder.mp3"; sourceTree = "<group>"; };
+		5A2EC24D1825ED6800F0B785 /* dead-mario.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "dead-mario.mp3"; sourceTree = "<group>"; };
+		5A2EC24E1825ED6800F0B785 /* dead-rockman.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "dead-rockman.mp3"; sourceTree = "<group>"; };
+		5A2EC25B1825ED9700F0B785 /* CDAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAudioManager.h; sourceTree = "<group>"; };
+		5A2EC25C1825ED9700F0B785 /* CDAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAudioManager.m; sourceTree = "<group>"; };
+		5A2EC25D1825ED9700F0B785 /* CDConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDConfig.h; sourceTree = "<group>"; };
+		5A2EC25E1825ED9700F0B785 /* CDOpenALSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDOpenALSupport.h; sourceTree = "<group>"; };
+		5A2EC25F1825ED9700F0B785 /* CDOpenALSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDOpenALSupport.m; sourceTree = "<group>"; };
+		5A2EC2601825ED9700F0B785 /* CocosDenshion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CocosDenshion.h; sourceTree = "<group>"; };
+		5A2EC2611825ED9700F0B785 /* CocosDenshion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CocosDenshion.m; sourceTree = "<group>"; };
+		5A2EC2621825ED9700F0B785 /* SimpleAudioEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleAudioEngine.h; sourceTree = "<group>"; };
+		5A2EC2631825ED9700F0B785 /* SimpleAudioEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleAudioEngine.m; sourceTree = "<group>"; };
+		5A2EC2681825EDC700F0B785 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		5A2EC26A1825EDCC00F0B785 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		5A2EC26C1825EDD100F0B785 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		5A2EC2721825F50F00F0B785 /* win.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = win.mp3; sourceTree = "<group>"; };
+		5A2EC2741825F91B00F0B785 /* 刀劍敲擊.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "刀劍敲擊.mp3"; sourceTree = "<group>"; };
+		5A2EC2751825F91B00F0B785 /* 毒打.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "毒打.mp3"; sourceTree = "<group>"; };
+		5A2EC27A1825FB6500F0B785 /* UIView+shake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+shake.h"; sourceTree = "<group>"; };
+		5A2EC27B1825FB6500F0B785 /* UIView+shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+shake.m"; sourceTree = "<group>"; };
+		5A2EC27D1825FC7D00F0B785 /* bgMusic.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bgMusic.wav; sourceTree = "<group>"; };
 		5A453B95181FD96000DC7578 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		5A453B97181FD96900DC7578 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		5A453B99181FD96F00DC7578 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -119,6 +155,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A2EC26D1825EDD100F0B785 /* AudioToolbox.framework in Frameworks */,
+				5A2EC26B1825EDCC00F0B785 /* OpenAL.framework in Frameworks */,
+				5A2EC2691825EDC700F0B785 /* AVFoundation.framework in Frameworks */,
 				5AEACC531824C4E8002DD2B4 /* CoreImage.framework in Frameworks */,
 				5A453B9C181FD98900DC7578 /* Accelerate.framework in Frameworks */,
 				5A453B9A181FD96F00DC7578 /* QuartzCore.framework in Frameworks */,
@@ -143,6 +182,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A2EC24B1825ED6800F0B785 /* 音效 */ = {
+			isa = PBXGroup;
+			children = (
+				5A2EC27D1825FC7D00F0B785 /* bgMusic.wav */,
+				5A2EC2741825F91B00F0B785 /* 刀劍敲擊.mp3 */,
+				5A2EC2751825F91B00F0B785 /* 毒打.mp3 */,
+				5A2EC2721825F50F00F0B785 /* win.mp3 */,
+				5A2EC24C1825ED6800F0B785 /* dead-ladder.mp3 */,
+				5A2EC24D1825ED6800F0B785 /* dead-mario.mp3 */,
+				5A2EC24E1825ED6800F0B785 /* dead-rockman.mp3 */,
+			);
+			path = "音效";
+			sourceTree = "<group>";
+		};
+		5A2EC25A1825ED9700F0B785 /* CocosDenshion */ = {
+			isa = PBXGroup;
+			children = (
+				5A2EC25B1825ED9700F0B785 /* CDAudioManager.h */,
+				5A2EC25C1825ED9700F0B785 /* CDAudioManager.m */,
+				5A2EC25D1825ED9700F0B785 /* CDConfig.h */,
+				5A2EC25E1825ED9700F0B785 /* CDOpenALSupport.h */,
+				5A2EC25F1825ED9700F0B785 /* CDOpenALSupport.m */,
+				5A2EC2601825ED9700F0B785 /* CocosDenshion.h */,
+				5A2EC2611825ED9700F0B785 /* CocosDenshion.m */,
+				5A2EC2621825ED9700F0B785 /* SimpleAudioEngine.h */,
+				5A2EC2631825ED9700F0B785 /* SimpleAudioEngine.m */,
+			);
+			path = CocosDenshion;
+			sourceTree = "<group>";
+		};
 		5A82CF10182396B100920CE0 /* SVHTTPRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +245,9 @@
 		5AD6636F181CE4C200069150 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A2EC26C1825EDD100F0B785 /* AudioToolbox.framework */,
+				5A2EC26A1825EDCC00F0B785 /* OpenAL.framework */,
+				5A2EC2681825EDC700F0B785 /* AVFoundation.framework */,
 				5AEACC521824C4E8002DD2B4 /* CoreImage.framework */,
 				5A453B9B181FD98900DC7578 /* Accelerate.framework */,
 				5A453B99181FD96F00DC7578 /* QuartzCore.framework */,
@@ -192,6 +264,8 @@
 		5AD66376181CE4C200069150 /* TravelHunter */ = {
 			isa = PBXGroup;
 			children = (
+				5A2EC25A1825ED9700F0B785 /* CocosDenshion */,
+				5A2EC24B1825ED6800F0B785 /* 音效 */,
 				5AEACC67182517BE002DD2B4 /* New Group */,
 				5AEACC541824C6E3002DD2B4 /* ImageCacheLite */,
 				5AEACC4E1824B142002DD2B4 /* MBProgressHUD */,
@@ -210,6 +284,8 @@
 				5AEACC6518251778002DD2B4 /* TTObserveVC.m */,
 				5AEACC611824CB89002DD2B4 /* TTChallengeVC.h */,
 				5AEACC621824CB89002DD2B4 /* TTChallengeVC.m */,
+				5A2EC27A1825FB6500F0B785 /* UIView+shake.h */,
+				5A2EC27B1825FB6500F0B785 /* UIView+shake.m */,
 				5AEACC7E1825329A002DD2B4 /* BloodView.h */,
 				5AEACC7F1825329A002DD2B4 /* BloodView.m */,
 				5AEACC7C182530F2002DD2B4 /* fight.xib */,
@@ -367,13 +443,20 @@
 				5AEACC7D182530F2002DD2B4 /* fight.xib in Resources */,
 				5AEACC7B18252379002DD2B4 /* yahoo05.jpg in Resources */,
 				5AEACC7718252342002DD2B4 /* yahoo02.jpg in Resources */,
+				5A2EC2541825ED6800F0B785 /* dead-mario.mp3 in Resources */,
+				5A2EC2761825F91B00F0B785 /* 刀劍敲擊.mp3 in Resources */,
+				5A2EC2771825F91B00F0B785 /* 毒打.mp3 in Resources */,
 				5AEACC7618252342002DD2B4 /* yahoo01.jpg in Resources */,
 				5AD66389181CE4C200069150 /* Images.xcassets in Resources */,
+				5A2EC2551825ED6800F0B785 /* dead-rockman.mp3 in Resources */,
 				5AD6637B181CE4C200069150 /* InfoPlist.strings in Resources */,
+				5A2EC2531825ED6800F0B785 /* dead-ladder.mp3 in Resources */,
 				5AEACC7518252342002DD2B4 /* yahoo00.jpg in Resources */,
+				5A2EC2731825F50F00F0B785 /* win.mp3 in Resources */,
 				5AD66384181CE4C200069150 /* Main.storyboard in Resources */,
 				5AEACC7918252342002DD2B4 /* yahoo04.jpg in Resources */,
 				5AEACC7818252342002DD2B4 /* yahoo03.jpg in Resources */,
+				5A2EC27E1825FC7D00F0B785 /* bgMusic.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +477,7 @@
 			files = (
 				5A453B9F181FDB4F00DC7578 /* TTFightVC.m in Sources */,
 				5A82CF16182396B100920CE0 /* SVHTTPRequest.m in Sources */,
+				5A2EC2661825ED9700F0B785 /* CocosDenshion.m in Sources */,
 				5AB23DE3181FD7C2002207D9 /* TTMapVC.m in Sources */,
 				5AEACC6618251778002DD2B4 /* TTObserveVC.m in Sources */,
 				5AEACC5A1824C6E4002DD2B4 /* UIImageView+ImageCache.m in Sources */,
@@ -401,11 +485,15 @@
 				5AD66381181CE4C200069150 /* TTAppDelegate.m in Sources */,
 				5AEACC511824B142002DD2B4 /* MBProgressHUD.m in Sources */,
 				5A82CF1A1823ABB400920CE0 /* PinAnnotation.m in Sources */,
+				5A2EC2671825ED9700F0B785 /* SimpleAudioEngine.m in Sources */,
 				5AEACC801825329A002DD2B4 /* BloodView.m in Sources */,
+				5A2EC27C1825FB6500F0B785 /* UIView+shake.m in Sources */,
 				5AEACC591824C6E4002DD2B4 /* NSString+MD5Addition.m in Sources */,
 				5A82CF15182396B100920CE0 /* SVHTTPClient.m in Sources */,
 				5AD663A7181CE57B00069150 /* TTLoginVC.m in Sources */,
 				5AD6637D181CE4C200069150 /* main.m in Sources */,
+				5A2EC2641825ED9700F0B785 /* CDAudioManager.m in Sources */,
+				5A2EC2651825ED9700F0B785 /* CDOpenALSupport.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

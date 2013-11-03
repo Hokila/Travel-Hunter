@@ -16,6 +16,7 @@
     #import "MBProgressHUD.h"
     #import "SVHTTPClient.h"
     #import "UIImageView+ImageCache.h"
+    #import "SimpleAudioEngine.h"
 #endif
 
 #define kUserName @"gethwhnabsg4h4qh"
